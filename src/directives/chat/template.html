@@ -1,8 +1,8 @@
-<div ng-class="'chatBox ' + id">
+<div ng-class="['chatBox', id]">
     <h1>{{label}}</h1>
     <ul class="thread" >
-        <li ng-repeat="(key, data) in thread track by $index" ng-class="data.id == id ? 'message' : 'message partner'">
-        {{data.content}}
+        <li ng-repeat="message in thread track by $index" ng-class="message.id == id ? 'message' : 'message partner'">
+        {{message.label + ':' + message.content}}
         </li>
     </ul>
     <input

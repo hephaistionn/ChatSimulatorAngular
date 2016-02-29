@@ -9,7 +9,7 @@ module.exports = app => {
             link: function($scope, element, attrs){
 
                 $scope.onSendMessage = () => {
-                    chatService.addMessage($scope.id, $scope.currentMessage);
+                    chatService.addMessage($scope.id, $scope.currentMessage, $scope.label);
                     $scope.currentMessage = '';
                 };
 

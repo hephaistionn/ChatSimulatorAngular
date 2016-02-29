@@ -6,9 +6,11 @@ module.exports = app => {
             thread: []
         };
 
-        this.addMessage = (id, messages) => {
+        this.addMessage = (id, messages, label) => {
+            if(messages === '') return;
             this.model.thread.push({
                 id: id,
+                label: label,
                 content: messages
             });
         };

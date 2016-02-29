@@ -2,10 +2,7 @@
 This app is a chat simulation. All frontend side .
 
 # Tech
-* [Angular] - HTML enhanced for web apps!
-
-# Architecture
-
+* [AngularJS] - HTML enhanced for web apps!
 
 # Installation
 
@@ -23,19 +20,30 @@ $ gulp build
 $ node server.js
 ```
 
+opens this page : [http://localhost:3000/]
+
 # Tests
 
-You need Karma installed globally:
+Tests are managed by Protractor. <br />
+Protractor needs to [Java Development Kit (JDK)] for working. <br />
+You need jasmine and protractor installed globally: <br />
 ```sh
-$ npm install -g karma-cli
+$ npm install -g jasmine
+$ npm install -g protractor
 ```
 
 Launch functional tests.
 ```sh
-$ karma start karma.conf.js
+$ webdriver-manager update
+$ webdriver-manager start  //test server
+$ protractor protractor.conf.js
 ```
 
 License
 ----
 
 MIT
+
+[AngularJS]: <http://angularjs.org>
+[Java Development Kit (JDK)]: <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
+[protractor]: <http://angular.github.io/protractor/#/>
