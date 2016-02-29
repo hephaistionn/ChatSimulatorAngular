@@ -1,0 +1,14 @@
+<div ng-class="'chatBox ' + id">
+    <h1>{{label}}</h1>
+    <ul class="thread" >
+        <li ng-repeat="(key, data) in thread track by $index" ng-class="data.id == id ? 'message' : 'message partner'">
+        {{data.content}}
+        </li>
+    </ul>
+    <input
+            type="text"
+            ng-model="currentMessage"
+            ng-maxlength="maxLength"
+            />
+    <div class="button" ng-click="onSendMessage()">Ok</div>
+</div>
